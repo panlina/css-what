@@ -398,8 +398,27 @@ var tests = [
 			]
 		],
 		"multiple selectors"
+	],
+
+	//extended attribute
+	[
+		"@foo",
+		[
+			[
+				{
+					type: 'attribute',
+					name: 'at',
+					action: 'equals',
+					value: 'foo',
+					ignoreCase: false
+				}
+			]
+		],
+		"extended attribute"
 	]
 ];
+
+parse.attribSelectors['@'] = ['at', 'equals'];
 
 tests.forEach(function(arr, i){
 	arr[0] = parse(arr[0]);

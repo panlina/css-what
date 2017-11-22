@@ -53,6 +53,8 @@ var quotes = {
 	"'": true
 };
 
+parse.attribSelectors = attribSelectors;
+
 //unescape function taken from https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L139
 function funescape( _, escaped, escapedWhitespace ) {
 	var high = "0x" + escaped - 0x10000;
