@@ -415,10 +415,29 @@ var tests = [
 			]
 		],
 		"extended attribute"
+	],
+
+	//extended action
+	[
+		"[foo<=\"12\"]",
+		[
+			[
+				{
+					type: 'attribute',
+					name: 'foo',
+					action: 'lt',
+					value: '12',
+					ignoreCase: false
+				}
+			]
+		],
+		"extended action"
 	]
 ];
 
 parse.attribSelectors['@'] = ['at', 'equals'];
+parse.actionTypes['<'] = 'lt';
+parse.actionTypes['>'] = 'gt';
 
 tests.forEach(function(arr, i){
 	arr[0] = parse(arr[0]);

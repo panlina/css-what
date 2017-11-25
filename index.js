@@ -54,6 +54,7 @@ var quotes = {
 };
 
 parse.attribSelectors = attribSelectors;
+parse.actionTypes = actionTypes;
 
 //unescape function taken from https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L139
 function funescape( _, escaped, escapedWhitespace ) {
