@@ -1,6 +1,6 @@
 # css-what [![Build Status](https://secure.travis-ci.org/fb55/css-what.svg?branch=master)](http://travis-ci.org/fb55/css-what)
 
-a CSS selector parser
+a CSS selector parser, with extensible syntax
 
 ## Example
 
@@ -40,6 +40,14 @@ name | attributes | example | output
 __Options:__
 
 - `xmlMode`: When enabled, tag names will be case-sensitive (meaning they won't be lowercased).
+
+__`CSSwhat.attribSelectors[operator] = [name, action]` - extend attribute selectors__
+
+Example: `CSSwhat.attribSelectors['@'] = ['at', 'equals'];`
+
+__`CSSwhat.actionTypes[operator] = action` - extend attribute selector actions__
+
+Example: `CSSwhat.actionTypes['<'] = 'lt';`
 
 ---
 
